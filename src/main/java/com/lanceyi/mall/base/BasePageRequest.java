@@ -24,7 +24,7 @@ public class BasePageRequest extends BaseRequest {
             required = true
     )
     @Min(1L)
-    private Integer pageIndex = 1;
+    private Integer pageNum = 1;
 
     public BasePageRequest() {
     }
@@ -37,11 +37,11 @@ public class BasePageRequest extends BaseRequest {
         this.pageSize = pageSize;
     }
 
-    public Integer getPageIndex() {
-        return this.pageIndex;
+    public Integer getPageNum() {
+        return this.pageNum;
     }
 
-    public void setPageIndex(Integer pageIndex) {
-        this.pageIndex = pageIndex;
+    public void setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
     }
 }

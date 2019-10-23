@@ -46,3 +46,17 @@ mybatis:
   #驼峰映射
   configuration:
     mapUnderscoreToCamelCase: true
+
+# PageHelper
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+
+logging:
+   level:
+      org:
+        hibernate:
+          SQL: debug

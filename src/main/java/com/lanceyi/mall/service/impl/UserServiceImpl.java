@@ -1,5 +1,6 @@
 package com.lanceyi.mall.service.impl;
 
+import com.github.pagehelper.PageHelper;
 import com.lanceyi.mall.base.BaseService;
 import com.lanceyi.mall.base.QueryListParam;
 import com.lanceyi.mall.mapper.UserMapper;
@@ -15,11 +16,12 @@ import java.util.List;
  * @Date 2019/10/23 15:34
  */
 @Service
-public class UserServiceImpl extends BaseService<UserMapper, User> implements UserService{
+public class UserServiceImpl extends BaseService<UserMapper, User, Integer> implements UserService{
 
     @Override
     public List<User> getUserList() {
         UserExample userExample = new UserExample();
+        UserExample.Criteria criteria = userExample.createCriteria();
         List<User> userList = super.mapper.selectByExample(userExample);
         return userList;
     }

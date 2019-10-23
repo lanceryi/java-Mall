@@ -56,3 +56,9 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
+
+logging:
+   level:
+     org:
+       hibernate:
+         SQL: debug

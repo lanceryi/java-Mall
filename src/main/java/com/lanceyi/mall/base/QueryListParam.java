@@ -7,7 +7,7 @@ package com.lanceyi.mall.base;
 
 public class QueryListParam {
     private Integer pageSize;
-    private Integer pageIndex;
+    private Integer pageNum;
 
     public QueryListParam() {
     }
@@ -20,11 +20,11 @@ public class QueryListParam {
         this.pageSize = pageSize;
     }
 
-    public Integer getPageIndex() {
-        return this.pageIndex;
+    public Integer getPageNum() {
+        return this.pageNum;
     }
 
-    public void setPageIndex(Integer pageIndex) {
-        this.pageIndex = pageIndex;
+    public void setPageNum(Integer pageNum) {
+        this.pageNum = pageNum;
     }
 }
