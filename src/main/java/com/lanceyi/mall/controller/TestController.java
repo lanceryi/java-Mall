@@ -44,7 +44,7 @@ public class TestController {
 
     @ApiOperation("获取分页用户列表")
     @PostMapping(Path.Test.PAGE_USER_LIST)
-    public SuccessResponseTemplate<PageInfo<User>> queryUserList(@RequestBody QueryListParam queryListParam) {
+    public SuccessResponseTemplate<PageInfo<List<User>>> queryUserList(@RequestBody QueryListParam queryListParam) {
         User user = new User();
         List<User> userList = userService.queryUserList(user, queryListParam);
         PageInfo pageInfo = new PageInfo(userList);
